@@ -82,10 +82,10 @@
         .case-img-container { width: 100%; height: 240px; background: white; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; }
         .case-img-container img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
         
-        .image-credit { position: absolute; bottom: 4px; right: 8px; font-size: 0.75rem; font-weight: 600; color: #94a3b8; background: rgba(255,255,255,0.9); padding: 2px 6px; border-radius: 4px; }
+        .image-credit { position: absolute; bottom: 4px; right: 8px; font-size: 9px; color: #94a3b8; background: rgba(255,255,255,0.8); padding: 1px 4px; border-radius: 2px; }
 
         .scenario-box { background: #fff7ed; border-radius: 2rem; border: 1px solid #ffedd5; padding: 2.5rem; position: relative; text-align: left; }
-        .scenario-box::before { content: "STUDENT SCENARIO"; position: absolute; top: -12px; left: 24px; background: #8C1D40; color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; }
+        .scenario-box::before { content: "STUDENT SCENARIO"; position: absolute; top: -12px; left: 24px; background: #8C1D40; color: white; padding: 2px 12px; border-radius: 4px; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; }
         
         .rule-context { font-size: 0.875rem; color: #5C6670; background: #f3f4f6; padding: 1rem; border-radius: 0.75rem; margin-top: 1rem; font-weight: 600; }
         .example-pill { background: #F8F8F8; border-left: 6px solid #FFC627; padding: 1.75rem; margin-top: 1.5rem; border-radius: 0 1rem 1rem 0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); }
@@ -115,7 +115,7 @@
             <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
         </div>
         <div class="max-w-5xl mx-auto px-6 lg:px-8 relative z-10 w-full text-center md:text-left">
-            <div class="inline-flex items-center gap-2 py-1 px-3 rounded bg-asu-gold text-asu-maroon text-xs md:text-sm font-bold uppercase tracking-widest mb-8 shadow-sm">
+            <div class="inline-flex items-center gap-2 py-1 px-3 rounded bg-asu-gold text-asu-maroon text-[11px] font-bold uppercase tracking-widest mb-8 shadow-sm">
                 <i class="fa-solid fa-graduation-cap"></i> MICROLEARNING TRAINING
             </div>
             <h1 class="text-6xl md:text-8xl font-extrabold text-asu-maroon tracking-tight leading-[0.9] mb-8 uppercase">
@@ -281,24 +281,30 @@
                     <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-full"></div>
                 </div>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- UDL Benefit 1 -->
                     <div class="bg-asu-lightGray p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 bg-white text-asu-maroon rounded-xl flex items-center justify-center mb-6 shadow-sm"><i class="fa-solid fa-ear-listen text-xl"></i></div>
                         <h4 class="font-bold text-xl mb-3 text-black uppercase tracking-tight">Assistive Tech</h4>
-                        <p class="text-sm text-asu-gray font-bold leading-relaxed m-0">Translates visual data into spoken words for students with visual impairments, directly addressing WCAG compliance.</p>
+                        <p class="text-sm text-asu-gray font-bold leading-relaxed m-0">Translates visual data into spoken words for students with visual impairments, directly addressing core WCAG compliance.</p>
                     </div>
                     <!-- UDL Benefit 2 -->
                     <div class="bg-asu-lightGray p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 bg-white text-asu-maroon rounded-xl flex items-center justify-center mb-6 shadow-sm"><i class="fa-solid fa-wifi text-xl"></i></div>
-                        <h4 class="font-bold text-xl mb-3 text-black uppercase tracking-tight">Connection Resilience</h4>
-                        <p class="text-sm text-asu-gray font-bold leading-relaxed m-0">If a student is on a poor mobile connection and the image fails to load, the descriptive text displays seamlessly in its place.</p>
+                        <h4 class="font-bold text-xl mb-3 text-black uppercase tracking-tight">Low-Bandwidth Resilience</h4>
+                        <p class="text-sm text-asu-gray font-bold leading-relaxed m-0">For students commuting, on restrictive data plans, or dealing with rural internet, alt-text displays seamlessly when images fail to load.</p>
                     </div>
                     <!-- UDL Benefit 3 -->
                     <div class="bg-asu-lightGray p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 bg-white text-asu-maroon rounded-xl flex items-center justify-center mb-6 shadow-sm"><i class="fa-solid fa-magnifying-glass text-xl"></i></div>
-                        <h4 class="font-bold text-xl mb-3 text-black uppercase tracking-tight">Search & Study</h4>
-                        <p class="text-sm text-asu-gray font-bold leading-relaxed m-0">Makes the text within complex diagrams fully searchable. Students can use "Ctrl+F" to find specific concepts embedded in graphics.</p>
+                        <h4 class="font-bold text-xl mb-3 text-black uppercase tracking-tight">Search & Discovery</h4>
+                        <p class="text-sm text-asu-gray font-bold leading-relaxed m-0">Pixels aren't searchable. Alt-text allows students to use "Ctrl+F" to locate concepts, and helps search engines index course materials.</p>
+                    </div>
+                    <!-- UDL Benefit 4 -->
+                    <div class="bg-asu-lightGray p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-white text-asu-maroon rounded-xl flex items-center justify-center mb-6 shadow-sm"><i class="fa-solid fa-brain text-xl"></i></div>
+                        <h4 class="font-bold text-xl mb-3 text-black uppercase tracking-tight">Cognitive Reinforcement</h4>
+                        <p class="text-sm text-asu-gray font-bold leading-relaxed m-0">Many learners process text better than visuals. A clear, well-written description reinforces the graphic, helping all students grasp complex concepts.</p>
                     </div>
                 </div>
             </div>
@@ -366,11 +372,11 @@
         </div>
     </section>
 
-    <!-- 6. THE 4 RULES -->
-    <section id="the-rules" class="py-32 px-6 bg-asu-lightGray border-y border-gray-100">
+    <!-- 7. THE 4 RULES -->
+    <section id="the-rules" class="py-32 px-6 bg-white border-b border-gray-100">
         <div class="max-w-4xl mx-auto rise-block text-left">
             <div class="mb-12 md:mb-16">
-                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3"><i class="fa-solid fa-list-check"></i> 05. The 4 Rules</h2>
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3"><i class="fa-solid fa-list-check"></i> 06. The 4 Rules</h2>
                 <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0">STEM Descriptive Standards</h3>
             </div>
             
@@ -447,11 +453,11 @@
         </div>
     </section>
 
-    <!-- 7. CASE STUDIES -->
-    <section id="case-studies" class="py-32 px-6 bg-white border-b border-gray-200">
+    <!-- 8. CASE STUDIES -->
+    <section id="case-studies" class="py-32 px-6 bg-asu-lightGray border-y border-gray-200">
         <div class="max-w-5xl mx-auto rise-block text-left">
             <div class="mb-12 md:mb-16">
-                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3"><i class="fa-solid fa-microscope"></i> 06. Case Studies</h2>
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3"><i class="fa-solid fa-microscope"></i> 07. Case Studies</h2>
                 <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0">Real-World Examples</h3>
             </div>
             
@@ -503,11 +509,11 @@
         </div>
     </section>
 
-    <!-- 8. INTERACTIVE PRACTICE LAB -->
-    <section class="py-32 px-6 bg-asu-lightGray border-b border-gray-100">
+    <!-- 9. INTERACTIVE PRACTICE LAB -->
+    <section class="py-32 px-6 bg-white border-b border-gray-100">
         <div class="max-w-5xl mx-auto rise-block">
             <div class="mb-12 md:mb-16 text-center">
-                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 font-sans">07. Practice Lab</h2>
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 font-sans">08. Practice Lab</h2>
                 <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0 font-sans">Mastering Alt-Text Logic</h3>
                 <p class="mt-6 text-asu-gray max-w-2xl mx-auto font-sans">Try describing this complex science visual, then we'll break down how to write it effectively.</p>
             </div>
