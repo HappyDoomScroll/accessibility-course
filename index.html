@@ -96,12 +96,42 @@
 </head>
 <body class="scroll-smooth font-sans antialiased overflow-x-hidden">
 
+<div id="asu-training-snippet">
     <div id="progress-container"><div id="progress-bar"></div></div>
+
+    <!-- NAVIGATION OVERLAY & DRAWER -->
+    <div id="nav-overlay" class="fixed inset-0 bg-black/50 z-[60] hidden opacity-0 transition-opacity duration-300"></div>
+    <nav id="nav-drawer" class="fixed top-0 left-0 w-80 h-full bg-white z-[70] transform -translate-x-full transition-transform duration-300 shadow-2xl flex flex-col">
+        <div class="p-6 border-b border-gray-100 flex justify-between items-center shrink-0">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-asu-maroon rounded flex items-center justify-center text-asu-gold font-bold text-[10px] shadow-sm">ASU</div>
+                <span class="font-bold text-asu-maroon text-sm tracking-widest uppercase">Menu</span>
+            </div>
+            <button id="close-menu-btn" class="text-gray-400 hover:text-asu-maroon focus:outline-none">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+        </div>
+        <div class="p-6 flex flex-col gap-2 overflow-y-auto grow">
+            <h4 class="text-xs font-bold text-asu-gray uppercase tracking-widest mb-2 mt-2">Modules</h4>
+            <a href="#intro" class="nav-link text-sm font-bold text-gray-700 hover:text-asu-maroon hover:bg-asu-maroon/5 p-3 rounded-lg transition-colors flex items-center gap-3"><span class="text-asu-maroon/70"><i class="fa-solid fa-circle-info"></i></span> 01. The Big Picture</a>
+            <a href="#mission" class="nav-link text-sm font-bold text-gray-700 hover:text-asu-maroon hover:bg-asu-maroon/5 p-3 rounded-lg transition-colors flex items-center gap-3"><span class="text-asu-maroon/70"><i class="fa-solid fa-flag"></i></span> 02. The ASU Mission</a>
+            <a href="#roadblocks" class="nav-link text-sm font-bold text-gray-700 hover:text-asu-maroon hover:bg-asu-maroon/5 p-3 rounded-lg transition-colors flex items-center gap-3"><span class="text-asu-maroon/70"><i class="fa-solid fa-triangle-exclamation"></i></span> 03. Roadblocks</a>
+            <a href="#foundations" class="nav-link text-sm font-bold text-gray-700 hover:text-asu-maroon hover:bg-asu-maroon/5 p-3 rounded-lg transition-colors flex items-center gap-3"><span class="text-asu-maroon/70"><i class="fa-solid fa-bridge"></i></span> 04. Foundations</a>
+            <a href="#anatomy" class="nav-link text-sm font-bold text-gray-700 hover:text-asu-maroon hover:bg-asu-maroon/5 p-3 rounded-lg transition-colors flex items-center gap-3"><span class="text-asu-maroon/70"><i class="fa-solid fa-layer-group"></i></span> 05. Anatomy of Alt-Text</a>
+            <a href="#the-rules" class="nav-link text-sm font-bold text-gray-700 hover:text-asu-maroon hover:bg-asu-maroon/5 p-3 rounded-lg transition-colors flex items-center gap-3"><span class="text-asu-maroon/70"><i class="fa-solid fa-list-check"></i></span> 06. The 4 Rules</a>
+            <a href="#case-studies" class="nav-link text-sm font-bold text-gray-700 hover:text-asu-maroon hover:bg-asu-maroon/5 p-3 rounded-lg transition-colors flex items-center gap-3"><span class="text-asu-maroon/70"><i class="fa-solid fa-microscope"></i></span> 07. Case Studies</a>
+            <a href="#practice" class="nav-link text-sm font-bold text-gray-700 hover:text-asu-maroon hover:bg-asu-maroon/5 p-3 rounded-lg transition-colors flex items-center gap-3"><span class="text-asu-maroon/70"><i class="fa-solid fa-laptop-code"></i></span> 08. Practice Lab</a>
+            <a href="#wrap-up" class="nav-link text-sm font-bold text-gray-700 hover:text-asu-maroon hover:bg-asu-maroon/5 p-3 rounded-lg transition-colors flex items-center gap-3"><span class="text-asu-maroon/70"><i class="fa-solid fa-flag-checkered"></i></span> 09. Wrap Up</a>
+        </div>
+    </nav>
 
     <!-- STICKY NAV -->
     <header id="top-nav" class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur z-50 transform -translate-y-full transition-transform duration-300 border-b-2 border-asu-gold">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
+                <button id="menu-btn" class="mr-2 text-asu-maroon hover:opacity-70 transition-opacity focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
                 <div class="w-9 h-9 bg-asu-maroon rounded flex items-center justify-center text-asu-gold font-bold text-xs shadow-sm">ASU</div>
                 <h1 class="font-bold text-asu-maroon text-sm tracking-widest uppercase m-0">Microlearning Training</h1>
             </div>
@@ -114,8 +144,14 @@
             <img class="w-full h-full object-cover opacity-10" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="" />
             <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
         </div>
+        
+        <!-- HERO MENU BUTTON -->
+        <button id="hero-menu-btn" class="absolute top-6 left-6 md:top-8 md:left-8 z-50 text-asu-maroon hover:text-black hover:bg-white transition-colors focus:outline-none bg-white/80 backdrop-blur px-4 py-3 rounded-full shadow-sm font-bold text-xs uppercase tracking-widest flex items-center gap-2 border border-gray-100">
+            <i class="fa-solid fa-bars text-lg"></i> Menu
+        </button>
+
         <div class="max-w-5xl mx-auto px-6 lg:px-8 relative z-10 w-full text-center md:text-left">
-            <div class="inline-flex items-center gap-2 py-1 px-3 rounded bg-asu-gold text-asu-maroon text-[11px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+            <div class="inline-flex items-center gap-2 py-1 px-3 rounded bg-asu-gold text-asu-maroon text-[11px] font-bold uppercase tracking-widest mb-8 shadow-sm mt-12 md:mt-0">
                 <i class="fa-solid fa-graduation-cap"></i> MICROLEARNING TRAINING
             </div>
             <h1 class="text-6xl md:text-8xl font-extrabold text-asu-maroon tracking-tight leading-[0.9] mb-8 uppercase">
@@ -224,7 +260,7 @@
     </section>
 
     <!-- 4. ROADBLOCKS -->
-    <section class="py-32 px-6 bg-asu-lightGray border-y border-gray-200">
+    <section id="roadblocks" class="py-32 px-6 bg-asu-lightGray border-y border-gray-200">
         <div class="max-w-5xl mx-auto rise-block text-left">
             <div class="mb-12 md:mb-16">
                 <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3"><i class="fa-solid fa-triangle-exclamation"></i> 03. Roadblocks to Success</h2>
@@ -536,7 +572,7 @@
     </section>
 
     <!-- 9. INTERACTIVE PRACTICE LAB -->
-    <section class="py-32 px-6 bg-white border-b border-gray-100">
+    <section id="practice" class="py-32 px-6 bg-white border-b border-gray-100">
         <div class="max-w-5xl mx-auto rise-block">
             <div class="mb-12 md:mb-16 text-center">
                 <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 font-sans">08. Practice Lab</h2>
@@ -614,7 +650,7 @@
         </section>
 
         <!-- 10. WRAP UP -->
-        <section class="py-32 px-6 text-center bg-asu-lightGray border-t border-gray-200">
+        <section id="wrap-up" class="py-32 px-6 text-center bg-asu-lightGray border-t border-gray-200">
             <div class="max-w-4xl mx-auto rise-block">
                 <div class="mb-12 md:mb-16">
                     <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4">09. Wrap Up</h2>
@@ -647,7 +683,7 @@
         </section>
 
         <!-- MINIFIED SCRIPTS: Prevents WordPress wpautop from injecting <p> and <br> tags -->
-        <script>!function(){window.addEventListener("scroll",(()=>{const e=document.body.scrollTop||document.documentElement.scrollTop,t=e/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100,n=document.getElementById("progress-bar");n&&(n.style.width=t+"%");const o=document.getElementById("top-nav");e>200?o.classList.remove("-translate-y-full"):o.classList.add("-translate-y-full")}));const e=new IntersectionObserver((e=>{e.forEach((e=>{e.isIntersecting&&(e.target.classList.add("is-visible"),t.unobserve(e.target))}))}),{threshold:.15}),t=e;document.querySelectorAll(".rise-block").forEach((t=>e.observe(t))),window.toggleAccordion=function(e,t){const n=document.getElementById(e),o=t.querySelector(".fa-chevron-down");n.style.maxHeight?(n.style.maxHeight=null,n.classList.remove("open"),o.style.transform="rotate(0deg)"):(n.style.maxHeight=n.scrollHeight+"px",n.classList.add("open"),o.style.transform="rotate(180deg)")},window.revealHowTo=function(){document.getElementById("reveal-btn").style.display="none",document.getElementById("practice-reveal").classList.remove("hidden")};let n=null;window.playTTS=async function(e,t){if(n)return n.pause(),n=null,void(t.innerHTML='<i class="fa-solid fa-volume-up"></i> Listen');const o=t.innerHTML;t.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Loading...';try{const a=await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contents:[{parts:[{text:e}]}],generationConfig:{responseModalities:["AUDIO"],speechConfig:{voiceConfig:{prebuiltVoiceConfig:{voiceName:"Aoede"}}}}})}),r=await a.json(),i=r.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;if(i){const e=window.atob(i),a=new Uint8Array(e.length);for(let t=0;t<e.length;t++)a[t]=e.charCodeAt(t);const r=new ArrayBuffer(44),s=new DataView(r);s.setUint32(0,1380533830,!1),s.setUint32(4,36+a.buffer.byteLength,!0),s.setUint32(8,1463899717,!1),s.setUint32(12,1718449184,!1),s.setUint32(16,16,!0),s.setUint16(20,1,!0),s.setUint16(22,1,!0),s.setUint32(24,24e3,!0),s.setUint32(28,48e3,!0),s.setUint16(32,2,!0),s.setUint16(34,16,!0),s.setUint32(36,1684108385,!1),s.setUint32(40,a.buffer.byteLength,!0);const l=new Uint8Array(44+a.buffer.byteLength);l.set(new Uint8Array(r),0),l.set(new Uint8Array(a.buffer),44),n=new Audio(URL.createObjectURL(new Blob([l],{type:"audio/wav"}))),n.play(),t.innerHTML='<i class="fa-solid fa-circle-stop"></i> Stop',n.onended=()=>{n=null,t.innerHTML=o}}}catch(e){t.innerHTML=o}}}();</script>
+        <script>!function(){window.addEventListener("scroll",(()=>{const e=document.body.scrollTop||document.documentElement.scrollTop,t=e/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100,n=document.getElementById("progress-bar");n&&(n.style.width=t+"%");const o=document.getElementById("top-nav");e>200?o.classList.remove("-translate-y-full"):o.classList.add("-translate-y-full")}));const e=new IntersectionObserver((e=>{e.forEach((e=>{e.isIntersecting&&(e.target.classList.add("is-visible"),t.unobserve(e.target))}))}),{threshold:.15}),t=e;document.querySelectorAll(".rise-block").forEach((t=>e.observe(t))),window.toggleAccordion=function(e,t){const n=document.getElementById(e),o=t.querySelector(".fa-chevron-down");n.style.maxHeight?(n.style.maxHeight=null,n.classList.remove("open"),o.style.transform="rotate(0deg)"):(n.style.maxHeight=n.scrollHeight+"px",n.classList.add("open"),o.style.transform="rotate(180deg)")},window.revealHowTo=function(){document.getElementById("reveal-btn").style.display="none",document.getElementById("practice-reveal").classList.remove("hidden")};let n=null;window.playTTS=async function(e,t){if(n)return n.pause(),n=null,void(t.innerHTML='<i class="fa-solid fa-volume-up"></i> Listen');const o=t.innerHTML;t.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Loading...';try{const a=await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contents:[{parts:[{text:e}]}],generationConfig:{responseModalities:["AUDIO"],speechConfig:{voiceConfig:{prebuiltVoiceConfig:{voiceName:"Aoede"}}}}})}),r=await a.json(),i=r.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;if(i){const e=window.atob(i),a=new Uint8Array(e.length);for(let t=0;t<e.length;t++)a[t]=e.charCodeAt(t);const r=new ArrayBuffer(44),s=new DataView(r);s.setUint32(0,1380533830,!1),s.setUint32(4,36+a.buffer.byteLength,!0),s.setUint32(8,1463899717,!1),s.setUint32(12,1718449184,!1),s.setUint32(16,16,!0),s.setUint16(20,1,!0),s.setUint16(22,1,!0),s.setUint32(24,24e3,!0),s.setUint32(28,48e3,!0),s.setUint16(32,2,!0),s.setUint16(34,16,!0),s.setUint32(36,1684108385,!1),s.setUint32(40,a.buffer.byteLength,!0);const l=new Uint8Array(44+a.buffer.byteLength);l.set(new Uint8Array(r),0),l.set(new Uint8Array(a.buffer),44),n=new Audio(URL.createObjectURL(new Blob([l],{type:"audio/wav"}))),n.play(),t.innerHTML='<i class="fa-solid fa-circle-stop"></i> Stop',n.onended=()=>{n=null,t.innerHTML=o}}}catch(e){t.innerHTML=o}}();const mBtn=document.getElementById("menu-btn"),hBtn=document.getElementById("hero-menu-btn"),cBtn=document.getElementById("close-menu-btn"),drwr=document.getElementById("nav-drawer"),ovrl=document.getElementById("nav-overlay"),nlks=document.querySelectorAll(".nav-link");function oM(){ovrl.classList.remove("hidden"),setTimeout((()=>ovrl.classList.remove("opacity-0")),10),drwr.classList.remove("-translate-x-full")}function cM(){ovrl.classList.add("opacity-0"),drwr.classList.add("-translate-x-full"),setTimeout((()=>ovrl.classList.add("hidden")),300)}mBtn&&mBtn.addEventListener("click",oM),hBtn&&hBtn.addEventListener("click",oM),cBtn&&cBtn.addEventListener("click",cM),ovrl&&ovrl.addEventListener("click",cM),nlks.forEach((e=>e.addEventListener("click",cM)));}();</script>
     </div>
 </div>
 </body>
