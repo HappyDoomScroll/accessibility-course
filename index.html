@@ -82,10 +82,10 @@
         .case-img-container { width: 100%; height: 240px; background: white; border-radius: 1rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; overflow: hidden; display: flex; align-items: center; justify-content: center; position: relative; }
         .case-img-container img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
         
-        .image-credit { position: absolute; bottom: 4px; right: 8px; font-size: 9px; color: #94a3b8; background: rgba(255,255,255,0.8); padding: 1px 4px; border-radius: 2px; }
+        .image-credit { position: absolute; bottom: 4px; right: 8px; font-size: 0.75rem; font-weight: 600; color: #94a3b8; background: rgba(255,255,255,0.9); padding: 2px 6px; border-radius: 4px; }
 
         .scenario-box { background: #fff7ed; border-radius: 2rem; border: 1px solid #ffedd5; padding: 2.5rem; position: relative; text-align: left; }
-        .scenario-box::before { content: "STUDENT SCENARIO"; position: absolute; top: -12px; left: 24px; background: #8C1D40; color: white; padding: 2px 12px; border-radius: 4px; font-size: 10px; font-weight: 800; letter-spacing: 0.1em; }
+        .scenario-box::before { content: "STUDENT SCENARIO"; position: absolute; top: -12px; left: 24px; background: #8C1D40; color: white; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; }
         
         .rule-context { font-size: 0.875rem; color: #5C6670; background: #f3f4f6; padding: 1rem; border-radius: 0.75rem; margin-top: 1rem; font-weight: 600; }
         .example-pill { background: #F8F8F8; border-left: 6px solid #FFC627; padding: 1.75rem; margin-top: 1.5rem; border-radius: 0 1rem 1rem 0; box-shadow: inset 0 2px 4px rgba(0,0,0,0.02); }
@@ -115,7 +115,7 @@
             <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
         </div>
         <div class="max-w-5xl mx-auto px-6 lg:px-8 relative z-10 w-full text-center md:text-left">
-            <div class="inline-flex items-center gap-2 py-1 px-3 rounded bg-asu-gold text-asu-maroon text-[11px] font-bold uppercase tracking-widest mb-8 shadow-sm">
+            <div class="inline-flex items-center gap-2 py-1 px-3 rounded bg-asu-gold text-asu-maroon text-xs md:text-sm font-bold uppercase tracking-widest mb-8 shadow-sm">
                 <i class="fa-solid fa-graduation-cap"></i> MICROLEARNING TRAINING
             </div>
             <h1 class="text-6xl md:text-8xl font-extrabold text-asu-maroon tracking-tight leading-[0.9] mb-8 uppercase">
@@ -139,8 +139,10 @@
     <!-- 1. LEARNING OBJECTIVES -->
     <section id="objectives" class="py-24 px-6 bg-asu-lightGray border-y border-gray-200">
         <div class="max-w-4xl mx-auto rise-block text-left">
-            <h2 class="text-xs font-bold text-asu-maroon uppercase tracking-[0.4em] mb-4">Learning Objectives</h2>
-            <h3 class="text-4xl font-extrabold mb-10 tracking-tight text-black">What You Will Achieve</h3>
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3">Learning Objectives</h2>
+                <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0">What You Will Achieve</h3>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="flex gap-5 items-start bg-white p-6 rounded-2xl shadow-sm">
                     <div class="w-10 h-10 rounded-full bg-asu-maroon/5 flex items-center justify-center shrink-0 border border-asu-maroon/10"><i class="fa-solid fa-eye text-asu-maroon"></i></div>
@@ -171,10 +173,12 @@
                 <cite class="block mt-8 text-asu-gray font-bold text-xs uppercase tracking-[0.2em]">— Jenny Lay-Flurrie, Chief Accessibility Officer at Microsoft</cite>
             </div>
             
-            <h2 class="text-xs font-bold text-asu-maroon uppercase tracking-[0.3em] mb-6 flex items-center gap-3"><i class="fa-solid fa-circle-info"></i> 01. The Big Picture</h2>
-            <div class="flex flex-col md:flex-row md:items-center gap-6 mb-10">
-                <h3 class="text-4xl font-extrabold text-black tracking-tight m-0 uppercase">Inclusion is a Choice</h3>
-                <button onclick="playTTS('Online learning brings amazing opportunities, but not everyone experiences it the same way. Students who have disabilities—or even those with temporary limitations like a broken arm—benefit when content is designed with accessibility in mind.', this)" class="btn-listen"><i class="fa-solid fa-volume-up"></i> Listen</button>
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3"><i class="fa-solid fa-circle-info"></i> 01. The Big Picture</h2>
+                <div class="flex flex-col md:flex-row md:items-end gap-6 justify-between">
+                    <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0">Inclusion is a Choice</h3>
+                    <button onclick="playTTS('Online learning brings amazing opportunities, but not everyone experiences it the same way. Students who have disabilities—or even those with temporary limitations like a broken arm—benefit when content is designed with accessibility in mind.', this)" class="btn-listen shrink-0 mb-2"><i class="fa-solid fa-volume-up"></i> Listen</button>
+                </div>
             </div>
             
             <div class="narrator-text space-y-6 text-gray-800">
@@ -187,13 +191,14 @@
     <!-- 3. MISSION BLOCK -->
     <section id="mission" class="py-32 px-6 bg-white overflow-hidden relative">
         <div class="max-w-6xl mx-auto rise-block z-10 relative">
-            <div class="text-center mb-16">
-                <h2 class="text-xs font-bold text-asu-maroon uppercase tracking-[0.4em] mb-4 text-asu-gray">02. The ASU Mission</h2>
-                <h3 class="text-4xl md:text-6xl font-extrabold text-black m-0 tracking-tighter uppercase leading-tight">Who We Include</h3>
-                <div class="mt-8">
-                    <button onclick="playTTS('ASU is measured not by whom it excludes, but by whom it includes and how they succeed. Inclusion starts with accessibility.', this)" class="btn-listen"><i class="fa-solid fa-volume-up"></i> Narrate Section</button>
+            <div class="mb-16 text-center md:text-left">
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4">02. The ASU Mission</h2>
+                <div class="flex flex-col md:flex-row md:items-end gap-6 justify-between">
+                    <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0">Who We Include</h3>
+                    <button onclick="playTTS('ASU is measured not by whom it excludes, but by whom it includes and how they succeed. Inclusion starts with accessibility.', this)" class="btn-listen shrink-0 mb-2"><i class="fa-solid fa-volume-up"></i> Narrate Section</button>
                 </div>
             </div>
+            
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="narrator-text text-black space-y-8 text-left">
                     <div class="p-8 border-l-[12px] border-asu-gold rounded-r-3xl bg-asu-lightGray shadow-sm">
@@ -221,7 +226,10 @@
     <!-- 4. ROADBLOCKS -->
     <section class="py-32 px-6 bg-asu-lightGray border-y border-gray-200">
         <div class="max-w-5xl mx-auto rise-block text-left">
-            <h2 class="text-xs font-bold text-asu-maroon uppercase tracking-[0.3em] mb-6 flex items-center gap-3"><i class="fa-solid fa-triangle-exclamation"></i> 03. Roadblocks to Success</h2>
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3"><i class="fa-solid fa-triangle-exclamation"></i> 03. Roadblocks to Success</h2>
+                <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0">Digital Barriers</h3>
+            </div>
             
             <div class="scenario-box mb-12 shadow-sm">
                 <p class="narrator-text !text-lg text-gray-800">
@@ -230,7 +238,7 @@
                     During a high-stakes lesson on thermodynamics, the professor includes an energy profile graph with no alt-text. Alex's software reads "Image_123.jpg." Alex has no way of knowing if the reaction is exothermic or endothermic. The learning path stops here.
                 </p>
                 <div class="mt-8 text-gray-700 font-bold leading-relaxed border-t border-asu-maroon/10 pt-6">
-                    <p class="text-asu-maroon m-0">Missing alt-text is a fragmented narrative. When we fail to provide access at the point of need, the lesson breaks down for the student in real-time.</p>
+                    <p class="text-asu-maroon m-0">Missing alt-text creates a fragmented narrative. When we fail to provide access at the point of need, the lesson breaks down for the student in real-time.</p>
                 </div>
             </div>
             
@@ -254,40 +262,43 @@
         </div>
     </section>
 
-    <!-- 5. FOUNDATIONS -->
+    <!-- 5. FOUNDATIONS (UDL Reframed) -->
     <section id="foundations" class="py-32 px-6 bg-white border-b border-gray-100">
-        <div class="max-w-4xl mx-auto rise-block text-left">
-            <h2 class="text-xs font-bold text-asu-maroon uppercase tracking-[0.3em] mb-6 flex items-center gap-3"><i class="fa-solid fa-bridge"></i> 04. Foundations</h2>
-            <div class="flex flex-col md:flex-row md:items-center gap-6 mb-10">
-                <h3 class="text-4xl font-extrabold text-black tracking-tight m-0 uppercase">The Invisible Bridge</h3>
-                <button onclick="playTTS('Alternative Text is the invisible bridge that transforms an image into descriptive information.', this)" class="btn-listen"><i class="fa-solid fa-volume-up"></i> Listen</button>
+        <div class="max-w-5xl mx-auto rise-block text-left">
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3"><i class="fa-solid fa-bridge"></i> 04. Foundations</h2>
+                <div class="flex flex-col md:flex-row md:items-end gap-6 justify-between">
+                    <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0">The Universal Bridge</h3>
+                    <button onclick="playTTS('Alternative Text is the invisible bridge that transforms an image into descriptive information. Universal Design for Learning shows us that providing multiple means of representation benefits everyone.', this)" class="btn-listen shrink-0 mb-2"><i class="fa-solid fa-volume-up"></i> Listen</button>
+                </div>
             </div>
+            
             <div class="narrator-text space-y-10">
-                <div class="p-10 bg-asu-maroon text-white rounded-[2.5rem] shadow-xl relative overflow-hidden">
-                    <p class="text-xl font-bold leading-relaxed relative z-10 m-0"><strong>Alternative Text (Alt-Text)</strong> is the invisible bridge that transforms an image into descriptive information for students using assistive technology.</p>
+                <div class="p-8 md:p-12 bg-asu-maroon text-white rounded-[3rem] shadow-xl relative overflow-hidden">
+                    <p class="text-xl md:text-2xl font-light leading-relaxed relative z-10 m-0">
+                        <strong>Alternative Text (Alt-Text)</strong> is the invisible bridge that transforms an image into descriptive data. While essential for compliance and screen readers, <strong>Universal Design for Learning (UDL)</strong> reveals that robust alt-text builds a stronger, more resilient learning experience for <em>everyone</em>.
+                    </p>
                     <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/5 rounded-full"></div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                    <div class="space-y-6">
-                        <h4 class="text-xl font-black text-asu-maroon uppercase tracking-tight">How it Works</h4>
-                        <ul class="space-y-4 list-none p-0">
-                            <li class="flex items-start gap-4">
-                                <div class="w-8 h-8 rounded-full bg-asu-gold text-asu-maroon flex items-center justify-center shrink-0 font-bold text-xs">1</div>
-                                <p class="text-sm font-bold text-gray-700 m-0"><strong>The Scan:</strong> Screen readers scan the underlying code of a webpage.</p>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-8 h-8 rounded-full bg-asu-gold text-asu-maroon flex items-center justify-center shrink-0 font-bold text-xs">2</div>
-                                <p class="text-sm font-bold text-gray-700 m-0"><strong>Translation:</strong> The software looks for the <code>alt</code> attribute.</p>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <div class="w-8 h-8 rounded-full bg-asu-gold text-asu-maroon flex items-center justify-center shrink-0 font-bold text-xs">3</div>
-                                <p class="text-sm font-bold text-gray-700 m-0"><strong>The Voice:</strong> It reads the description aloud, letting the student "hear" the lesson.</p>
-                            </li>
-                        </ul>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- UDL Benefit 1 -->
+                    <div class="bg-asu-lightGray p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-white text-asu-maroon rounded-xl flex items-center justify-center mb-6 shadow-sm"><i class="fa-solid fa-ear-listen text-xl"></i></div>
+                        <h4 class="font-bold text-xl mb-3 text-black uppercase tracking-tight">Assistive Tech</h4>
+                        <p class="text-sm text-asu-gray font-bold leading-relaxed m-0">Translates visual data into spoken words for students with visual impairments, directly addressing WCAG compliance.</p>
                     </div>
-                    <div class="bg-asu-lightGray p-8 rounded-3xl border border-gray-200 shadow-sm">
-                        <h4 class="text-xl font-bold text-black uppercase tracking-tight mb-4">Why it Matters</h4>
-                        <p class="text-sm text-gray-700 leading-relaxed font-medium m-0">Providing alt-text is the primary way we meet <strong>WCAG Standard 1.1.1</strong>. High-quality descriptions ensure the actual point of the lesson is delivered exactly when it's needed.</p>
+                    <!-- UDL Benefit 2 -->
+                    <div class="bg-asu-lightGray p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-white text-asu-maroon rounded-xl flex items-center justify-center mb-6 shadow-sm"><i class="fa-solid fa-wifi text-xl"></i></div>
+                        <h4 class="font-bold text-xl mb-3 text-black uppercase tracking-tight">Connection Resilience</h4>
+                        <p class="text-sm text-asu-gray font-bold leading-relaxed m-0">If a student is on a poor mobile connection and the image fails to load, the descriptive text displays seamlessly in its place.</p>
+                    </div>
+                    <!-- UDL Benefit 3 -->
+                    <div class="bg-asu-lightGray p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 bg-white text-asu-maroon rounded-xl flex items-center justify-center mb-6 shadow-sm"><i class="fa-solid fa-magnifying-glass text-xl"></i></div>
+                        <h4 class="font-bold text-xl mb-3 text-black uppercase tracking-tight">Search & Study</h4>
+                        <p class="text-sm text-asu-gray font-bold leading-relaxed m-0">Makes the text within complex diagrams fully searchable. Students can use "Ctrl+F" to find specific concepts embedded in graphics.</p>
                     </div>
                 </div>
             </div>
@@ -297,17 +308,18 @@
     <!-- 6. ANATOMY OF ALT-TEXT -->
     <section id="anatomy" class="py-32 px-6 bg-asu-lightGray border-y border-gray-200">
         <div class="max-w-5xl mx-auto rise-block text-left">
-            <h2 class="text-xs font-bold text-asu-maroon uppercase tracking-[0.3em] mb-6 flex items-center gap-3"><i class="fa-solid fa-layer-group"></i> 05. Anatomy of Alt-Text</h2>
-            <div class="flex flex-col md:flex-row md:items-center gap-6 mb-12">
-                <h3 class="text-4xl font-extrabold text-black tracking-tight m-0 uppercase">Breaking It Down</h3>
-                <button onclick="playTTS('A strong alt-text description typically contains three key parts: the format of the image, the subject, and the instructional takeaway.', this)" class="btn-listen"><i class="fa-solid fa-volume-up"></i> Listen</button>
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3"><i class="fa-solid fa-layer-group"></i> 05. Anatomy of Alt-Text</h2>
+                <div class="flex flex-col md:flex-row md:items-end gap-6 justify-between">
+                    <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0">Breaking It Down</h3>
+                    <button onclick="playTTS('A strong alt-text description typically contains three key parts: the format of the image, the subject, and the instructional takeaway.', this)" class="btn-listen shrink-0 mb-2"><i class="fa-solid fa-volume-up"></i> Listen</button>
+                </div>
             </div>
 
             <div class="bg-white rounded-[3rem] p-8 md:p-12 shadow-sm border border-gray-100 flex flex-col lg:flex-row gap-12 items-center">
                 <!-- Image Side -->
                 <div class="w-full lg:w-1/2">
                     <div class="case-img-container h-auto min-h-[250px] mb-0 bg-[#f8fafc]">
-                        <!-- Simple visual for demonstration -->
                         <svg viewBox="0 0 400 250" class="w-full h-auto p-4">
                             <line x1="50" y1="200" x2="350" y2="200" stroke="#94a3b8" stroke-width="2"/>
                             <line x1="50" y1="200" x2="50" y2="20" stroke="#94a3b8" stroke-width="2"/>
@@ -354,11 +366,13 @@
         </div>
     </section>
 
-    <!-- 7. THE 4 RULES -->
-    <section id="the-rules" class="py-32 px-6 bg-white border-b border-gray-100">
+    <!-- 6. THE 4 RULES -->
+    <section id="the-rules" class="py-32 px-6 bg-asu-lightGray border-y border-gray-100">
         <div class="max-w-4xl mx-auto rise-block text-left">
-            <h2 class="text-xs font-bold text-asu-maroon uppercase tracking-[0.3em] mb-6 flex items-center gap-3"><i class="fa-solid fa-list-check"></i> 06. The 4 Rules</h2>
-            <h3 class="text-4xl font-extrabold text-black tracking-tight mb-12 uppercase">STEM Descriptive Standards</h3>
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3"><i class="fa-solid fa-list-check"></i> 05. The 4 Rules</h2>
+                <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0">STEM Descriptive Standards</h3>
+            </div>
             
             <div class="space-y-4">
                 <!-- Rule 1 -->
@@ -372,9 +386,9 @@
                     </button>
                     <div id="acc-1" class="accordion-content px-8"><div class="pb-8 pt-2 narrator-text text-asu-gray border-t border-gray-50 mt-2">
                         Alt-text is not a one-size-fits-all description; it changes based on the lesson's current objective. If an image of a cell is used in a lesson about the nucleus, describe the nucleus. If the same image is used to teach cell walls, describe the cell wall.
-                        <div class="rule-context">The "Why": Students using screen readers cannot "glance" past irrelevant details. Over-describing visual clutter creates cognitive overload. Pinpointing the exact instructional context saves time and energy.</div>
-                        <div class="example-pill"><span class="text-asu-maroon font-bold text-[10px] uppercase tracking-widest bg-asu-gold/20 px-2 py-1 rounded">Application</span>
-                            <p class="text-sm font-bold text-black mt-3 m-0">In biology: "Diagram of a mitochondrion highlighting the inner folding where energy production occurs."</p>
+                        <div class="rule-context font-sans">The "Why": Students using screen readers cannot "glance" past irrelevant details. Over-describing visual clutter creates cognitive overload. Pinpointing the exact instructional context saves time and energy.</div>
+                        <div class="example-pill"><span class="text-asu-maroon font-bold text-xs uppercase tracking-widest bg-asu-gold/20 px-2 py-1 rounded">Application</span>
+                            <p class="text-sm font-bold text-black mt-3 m-0 font-sans">In biology: "Diagram of a mitochondrion highlighting the inner folding where energy production occurs."</p>
                         </div>
                     </div></div>
                 </div>
@@ -389,9 +403,9 @@
                     </button>
                     <div id="acc-2" class="accordion-content px-8"><div class="pb-8 pt-2 narrator-text text-asu-gray border-t border-gray-50 mt-2">
                         Never start with "Image of" or "Picture of"—assistive technology already announces the element as an image. Furthermore, if the surrounding paragraph already fully explains the visual data, your alt-text should be brief and point back to the text.
-                        <div class="rule-context">The "Why": Screen readers read linearly. Forcing a student to listen to "Graphic of..." on every single visual is tedious. Repeating a paragraph of text they just read is even worse.</div>
-                        <div class="example-pill"><span class="text-asu-maroon font-bold text-[10px] uppercase tracking-widest bg-asu-gold/20 px-2 py-1 rounded">Application</span>
-                            <p class="text-sm font-bold text-black mt-3 m-0">"Line graph of temperature trends. Data points and specific yearly increases are explained in the text above."</p>
+                        <div class="rule-context font-sans">The "Why": Screen readers read linearly. Forcing a student to listen to "Graphic of..." on every single visual is tedious. Repeating a paragraph of text they just read is even worse.</div>
+                        <div class="example-pill"><span class="text-asu-maroon font-bold text-xs uppercase tracking-widest bg-asu-gold/20 px-2 py-1 rounded">Application</span>
+                            <p class="text-sm font-bold text-black mt-3 m-0 font-sans">"Line graph of temperature trends. Data points and specific yearly increases are explained in the text above."</p>
                         </div>
                     </div></div>
                 </div>
@@ -406,9 +420,9 @@
                     </button>
                     <div id="acc-3" class="accordion-content px-8"><div class="pb-8 pt-2 narrator-text text-asu-gray border-t border-gray-50 mt-2">
                         If a complex chart, graph, or diagram introduces new information that isn't explicitly covered in the surrounding body text, the alt-text must shoulder the burden of teaching that concept completely.
-                        <div class="rule-context">The "Why": Sighted students can extract pedagogical value directly from the image. If the image is removed, does the lesson still make sense? If not, the alt-text must bridge that instructional gap.</div>
-                        <div class="example-pill"><span class="text-asu-maroon font-bold text-[10px] uppercase tracking-widest bg-asu-gold/20 px-2 py-1 rounded">Application</span>
-                            <p class="text-sm font-bold text-black mt-3 m-0">"Scatterplot showing a strong positive correlation between sunlight and plant height."</p>
+                        <div class="rule-context font-sans">The "Why": Sighted students can extract pedagogical value directly from the image. If the image is removed, does the lesson still make sense? If not, the alt-text must bridge that instructional gap.</div>
+                        <div class="example-pill"><span class="text-asu-maroon font-bold text-xs uppercase tracking-widest bg-asu-gold/20 px-2 py-1 rounded">Application</span>
+                            <p class="text-sm font-bold text-black mt-3 m-0 font-sans">"Scatterplot showing a strong positive correlation between sunlight and plant height."</p>
                         </div>
                     </div></div>
                 </div>
@@ -423,9 +437,9 @@
                     </button>
                     <div id="acc-4" class="accordion-content px-8"><div class="pb-8 pt-2 narrator-text text-asu-gray border-t border-gray-50 mt-2">
                         Avoid raw LaTeX, MathML code, or symbol-heavy strings in your alt-text. Instead, write out mathematical expressions, formulas, and symbols exactly as a professor would dictate them out loud to a lecture hall.
-                        <div class="rule-context">The "Why": Screen readers interpret punctuation and symbols unpredictably. A hyphen might be read as a minus sign, or skipped entirely. Using plain language ensures the mathematical concept is unambiguous.</div>
-                        <div class="example-pill"><span class="text-asu-maroon font-bold text-[10px] uppercase tracking-widest bg-asu-gold/20 px-2 py-1 rounded">Application</span>
-                            <p class="text-sm font-bold text-black mt-3 m-0">For $E=mc^2$, use: "Energy equals mass times the speed of light squared."</p>
+                        <div class="rule-context font-sans">The "Why": Screen readers interpret punctuation and symbols unpredictably. A hyphen might be read as a minus sign, or skipped entirely. Using plain language ensures the mathematical concept is unambiguous.</div>
+                        <div class="example-pill"><span class="text-asu-maroon font-bold text-xs uppercase tracking-widest bg-asu-gold/20 px-2 py-1 rounded">Application</span>
+                            <p class="text-sm font-bold text-black mt-3 m-0 font-sans">For $E=mc^2$, use: "Energy equals mass times the speed of light squared."</p>
                         </div>
                     </div></div>
                 </div>
@@ -433,11 +447,13 @@
         </div>
     </section>
 
-    <!-- 8. CASE STUDIES -->
-    <section id="case-studies" class="py-32 px-6 bg-asu-lightGray border-y border-gray-200">
+    <!-- 7. CASE STUDIES -->
+    <section id="case-studies" class="py-32 px-6 bg-white border-b border-gray-200">
         <div class="max-w-5xl mx-auto rise-block text-left">
-            <h2 class="text-xs font-bold text-asu-maroon uppercase tracking-[0.3em] mb-6 flex items-center gap-3"><i class="fa-solid fa-microscope"></i> 07. Case Studies</h2>
-            <h3 class="text-4xl font-extrabold text-black tracking-tight mb-12 uppercase">Real-World Examples</h3>
+            <div class="mb-12 md:mb-16">
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 flex items-center gap-3"><i class="fa-solid fa-microscope"></i> 06. Case Studies</h2>
+                <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0">Real-World Examples</h3>
+            </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Case 1: Chemistry -->
@@ -446,16 +462,16 @@
                         <div class="flip-card-front">
                             <div class="case-img-container">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Exothermic_Reaction.svg/1024px-Exothermic_Reaction.svg.png" alt="Exothermic Reaction Graph">
-                                <span class="image-credit">Source: Wikimedia Commons</span>
+                                <span class="image-credit font-sans">Source: Wikimedia Commons</span>
                             </div>
-                            <h4 class="font-bold text-xl mb-4 text-black uppercase">Chemistry: Energy Profile</h4>
-                            <p class="font-mono text-xs bg-gray-50 p-4 rounded-xl border border-gray-100 shadow-inner text-gray-500 m-0">alt="Graph of chemical reaction energy."</p>
-                            <p class="mt-8 text-[10px] uppercase font-bold text-asu-maroon tracking-widest"><i class="fa-solid fa-rotate mr-2"></i> Tap to flip for standard</p>
+                            <h4 class="font-bold text-xl mb-4 text-black uppercase font-sans">Chemistry: Energy Profile</h4>
+                            <p class="font-mono text-sm bg-gray-50 p-4 rounded-xl border border-gray-100 shadow-inner text-gray-500 m-0">alt="Graph of chemical reaction energy."</p>
+                            <p class="mt-8 text-xs uppercase font-bold text-asu-maroon tracking-widest font-sans"><i class="fa-solid fa-rotate mr-2"></i> Tap to flip for standard</p>
                         </div>
-                        <div class="flip-card-back text-left text-white">
-                            <h4 class="font-bold text-xl mb-4 text-asu-maroon uppercase">Inclusive Standard</h4>
-                            <p class="text-sm leading-relaxed mb-4 text-black">Focus on the <strong>Exothermic</strong> nature (the point of the lesson).</p>
-                            <p class="font-mono text-xs bg-gray-50 p-6 rounded-xl border border-gray-200 leading-relaxed m-0 italic text-gray-700">
+                        <div class="flip-card-back bg-white border-2 border-asu-maroon text-left">
+                            <h4 class="font-bold text-xl mb-4 text-asu-maroon uppercase font-sans">Inclusive Standard</h4>
+                            <p class="text-sm leading-relaxed mb-4 text-black font-sans">Focus on the <strong>Exothermic</strong> nature (the point of the lesson).</p>
+                            <p class="font-mono text-sm bg-gray-50 p-6 rounded-xl border border-gray-200 leading-relaxed m-0 italic text-gray-800">
                                 alt="Line graph of an exothermic reaction showing the potential energy of reactants dropping to a lower energy level in products. A high peak in the middle represents the activation energy required."
                             </p>
                         </div>
@@ -468,16 +484,16 @@
                         <div class="flip-card-front">
                             <div class="case-img-container">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Animal_mitochondrion_diagram_en.svg/1024px-Animal_mitochondrion_diagram_en.svg.png" alt="Mitochondria Diagram">
-                                <span class="image-credit">Source: Wikimedia / Kelvinsong</span>
+                                <span class="image-credit font-sans">Source: Wikimedia / Kelvinsong</span>
                             </div>
-                            <h4 class="font-bold text-xl mb-4 text-black uppercase">Biology: Mitochondria</h4>
-                            <p class="font-mono text-xs bg-gray-50 p-4 rounded-xl border border-gray-100 shadow-inner text-gray-500 m-0">alt="Diagram of animal mitochondrion."</p>
-                            <p class="mt-8 text-[10px] uppercase font-bold text-asu-maroon tracking-widest"><i class="fa-solid fa-rotate mr-2"></i> Tap to flip for standard</p>
+                            <h4 class="font-bold text-xl mb-4 text-black uppercase font-sans">Biology: Mitochondria</h4>
+                            <p class="font-mono text-sm bg-gray-50 p-4 rounded-xl border border-gray-100 shadow-inner text-gray-500 m-0">alt="Diagram of animal mitochondrion."</p>
+                            <p class="mt-8 text-xs uppercase font-bold text-asu-maroon tracking-widest font-sans"><i class="fa-solid fa-rotate mr-2"></i> Tap to flip for standard</p>
                         </div>
-                        <div class="flip-card-back text-left text-white">
-                            <h4 class="font-bold text-xl mb-4 text-asu-maroon uppercase">Inclusive Standard</h4>
-                            <p class="text-sm leading-relaxed mb-4 text-black">Focus on the <strong>Cristae</strong> (the functional folding).</p>
-                            <p class="font-mono text-xs bg-gray-50 p-6 rounded-xl border border-gray-200 leading-relaxed m-0 italic text-gray-700">
+                        <div class="flip-card-back bg-white border-2 border-asu-maroon text-left">
+                            <h4 class="font-bold text-xl mb-4 text-asu-maroon uppercase font-sans">Inclusive Standard</h4>
+                            <p class="text-sm leading-relaxed mb-4 text-black font-sans">Focus on the <strong>Cristae</strong> (the functional folding).</p>
+                            <p class="font-mono text-sm bg-gray-50 p-6 rounded-xl border border-gray-200 leading-relaxed m-0 italic text-gray-800">
                                 alt="Cross-section diagram of a mitochondrion. Highlighting the inner membrane's extensive folding, called cristae, which increases surface area for chemical reactions."
                             </p>
                         </div>
@@ -487,67 +503,67 @@
         </div>
     </section>
 
-    <!-- 9. INTERACTIVE PRACTICE LAB -->
-    <section class="py-32 px-6 bg-white border-b border-gray-100">
+    <!-- 8. INTERACTIVE PRACTICE LAB -->
+    <section class="py-32 px-6 bg-asu-lightGray border-b border-gray-100">
         <div class="max-w-5xl mx-auto rise-block">
-            <div class="text-center mb-16">
-                <h2 class="text-xs font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4">08. Practice Lab</h2>
-                <h3 class="text-5xl font-extrabold text-black tracking-tighter uppercase leading-tight">Mastering Alt-Text Logic</h3>
-                <p class="mt-4 text-asu-gray max-w-2xl mx-auto">Try describing this complex science visual, then we'll break down how to write it effectively.</p>
+            <div class="mb-12 md:mb-16 text-center">
+                <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4 font-sans">07. Practice Lab</h2>
+                <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0 font-sans">Mastering Alt-Text Logic</h3>
+                <p class="mt-6 text-asu-gray max-w-2xl mx-auto font-sans">Try describing this complex science visual, then we'll break down how to write it effectively.</p>
             </div>
             
             <div class="activity-content block animate-fade-in text-left max-w-4xl mx-auto">
                 <div class="bg-white border-2 border-gray-100 rounded-[3rem] p-8 md:p-12 shadow-sm">
                     <div class="mb-10">
-                        <h4 class="text-3xl font-extrabold text-black mb-2 uppercase tracking-tighter">Astronomy: H-R Diagram</h4>
-                        <p class="text-asu-maroon font-bold text-xs uppercase tracking-widest m-0 italic">Lesson Focus: The relationship between star temperature and luminosity.</p>
+                        <h4 class="text-3xl font-extrabold text-black mb-2 uppercase tracking-tighter font-sans">Astronomy: H-R Diagram</h4>
+                        <p class="text-asu-maroon font-bold text-sm uppercase tracking-widest m-0 italic font-sans">Lesson Focus: The relationship between star temperature and luminosity.</p>
                     </div>
                     
                     <div class="case-img-container h-auto min-h-[300px] mb-10">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/HRDiagram.png/1024px-HRDiagram.png" alt="Hertzsprung-Russell Diagram">
-                        <span class="image-credit">Source: ESO / Wikimedia Commons</span>
+                        <span class="image-credit font-sans">Source: ESO / Wikimedia Commons</span>
                     </div>
 
                     <div id="step-1" class="transition-all duration-500">
-                        <p class="font-bold text-gray-800 mb-4">Step 1: Your Attempt</p>
-                        <textarea id="practice-alt-text" rows="3" class="w-full p-6 border-2 border-gray-200 rounded-2xl mb-6 focus:border-asu-maroon outline-none transition-colors shadow-inner font-medium text-left" placeholder="Type your alt-text here..."></textarea>
-                        <button onclick="revealHowTo()" id="reveal-btn" class="bg-asu-maroon text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-lg outline-none w-full md:w-auto">Get Strategy Breakdown</button>
+                        <p class="font-bold text-gray-800 mb-4 font-sans">Step 1: Your Attempt</p>
+                        <textarea id="practice-alt-text" rows="3" class="w-full p-6 border-2 border-gray-200 rounded-2xl mb-6 focus:border-asu-maroon outline-none transition-colors shadow-inner font-medium text-left font-sans" placeholder="Type your alt-text here..."></textarea>
+                        <button onclick="revealHowTo()" id="reveal-btn" class="bg-asu-maroon text-white px-12 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-transform shadow-lg outline-none w-full md:w-auto font-sans">Get Strategy Breakdown</button>
                     </div>
 
                     <div id="practice-reveal" class="hidden mt-10 space-y-8 animate-reveal">
                         <div class="p-8 bg-asu-gold/5 rounded-3xl border-2 border-asu-gold/20">
-                            <h5 class="text-asu-maroon font-extrabold uppercase text-sm tracking-widest mb-6"><i class="fa-solid fa-wand-magic-sparkles mr-2"></i> How to write this effectively:</h5>
+                            <h5 class="text-asu-maroon font-extrabold uppercase text-base tracking-widest mb-6 font-sans"><i class="fa-solid fa-wand-magic-sparkles mr-2"></i> How to write this effectively:</h5>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="space-y-4">
                                     <div class="flex gap-4">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-asu-maroon text-white flex items-center justify-center text-[10px] font-bold">1</div>
+                                        <div class="shrink-0 w-6 h-6 rounded-full bg-asu-maroon text-white flex items-center justify-center text-sm font-bold">1</div>
                                         <div>
-                                            <p class="font-bold text-sm m-0">Identify the Core Lesson</p>
-                                            <p class="text-xs text-asu-gray m-0">Focus on the diagonal "main sequence" trend.</p>
+                                            <p class="font-bold text-base m-0 font-sans">Identify the Core Lesson</p>
+                                            <p class="text-sm text-asu-gray m-0 font-sans">Focus on the diagonal "main sequence" trend.</p>
                                         </div>
                                     </div>
                                     <div class="flex gap-4">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-asu-maroon text-white flex items-center justify-center text-[10px] font-bold">2</div>
+                                        <div class="shrink-0 w-6 h-6 rounded-full bg-asu-maroon text-white flex items-center justify-center text-sm font-bold">2</div>
                                         <div>
-                                            <p class="font-bold text-sm m-0">Define the Burden of Instruction</p>
-                                            <p class="text-xs text-asu-gray m-0">Explain that hotter stars (left) are brighter (top).</p>
+                                            <p class="font-bold text-base m-0 font-sans">Define the Burden of Instruction</p>
+                                            <p class="text-sm text-asu-gray m-0 font-sans">Explain that hotter stars (left) are brighter (top).</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="space-y-4">
                                     <div class="flex gap-4">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-asu-maroon text-white flex items-center justify-center text-[10px] font-bold">3</div>
+                                        <div class="shrink-0 w-6 h-6 rounded-full bg-asu-maroon text-white flex items-center justify-center text-sm font-bold">3</div>
                                         <div>
-                                            <p class="font-bold text-sm m-0">Remove Redundancy</p>
-                                            <p class="text-xs text-asu-gray m-0">Start directly. No "Image of."</p>
+                                            <p class="font-bold text-base m-0 font-sans">Remove Redundancy</p>
+                                            <p class="text-sm text-asu-gray m-0 font-sans">Start directly. No "Image of."</p>
                                         </div>
                                     </div>
                                     <div class="flex gap-4">
-                                        <div class="shrink-0 w-6 h-6 rounded-full bg-asu-maroon text-white flex items-center justify-center text-[10px] font-bold">4</div>
+                                        <div class="shrink-0 w-6 h-6 rounded-full bg-asu-maroon text-white flex items-center justify-center text-sm font-bold">4</div>
                                         <div>
-                                            <p class="font-bold text-sm m-0">Mention Outliers</p>
-                                            <p class="text-xs text-asu-gray m-0">Briefly note the Giants and Dwarfs.</p>
+                                            <p class="font-bold text-base m-0 font-sans">Mention Outliers</p>
+                                            <p class="text-sm text-asu-gray m-0 font-sans">Briefly note the Giants and Dwarfs.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -555,7 +571,7 @@
                         </div>
 
                         <div class="p-8 bg-asu-maroon text-white rounded-3xl shadow-xl">
-                            <h5 class="text-asu-gold font-extrabold uppercase text-xs tracking-widest mb-4">Expert Suggestion:</h5>
+                            <h5 class="text-asu-gold font-extrabold uppercase text-sm tracking-widest mb-4 font-sans">Expert Suggestion:</h5>
                             <p class="font-serif italic text-lg leading-relaxed m-0">
                                 "A Hertzsprung-Russell Diagram plotting luminosity against temperature. Most stars lie along the diagonal main sequence, showing that hotter stars are more luminous. Red giants appear at the top right, while white dwarfs are in the bottom left."
                             </p>
@@ -565,40 +581,29 @@
             </div>
         </section>
 
-        <!-- 10. REFLECTION BLOCK -->
-        <section class="py-24 px-6 text-center bg-asu-lightGray border-b border-gray-100">
-            <div class="max-w-3xl mx-auto rise-block">
-                <div class="w-16 h-16 bg-white text-asu-maroon rounded-full flex items-center justify-center mx-auto mb-8 shadow-sm border border-gray-200">
-                    <i class="fa-solid fa-lightbulb text-2xl"></i>
-                </div>
-                <h3 class="text-3xl font-extrabold text-black mb-6 uppercase tracking-tighter">Pause and Reflect</h3>
-                <div class="narrator-text text-gray-700">
-                    <p class="mb-6">Think back to Alex. How would a high-quality description of that pressure gradient diagram have changed his results in that course?</p>
-                    <p class="mt-8 font-bold text-asu-maroon uppercase text-sm tracking-wider">Universal Design for Learning (UDL) tells us that providing multiple means of representation benefits everyone. Accessibility is simply removing roadblocks so every learner has the same opportunity for success.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 11. WRAP UP -->
-        <section class="py-32 px-6 text-center bg-white">
+        <!-- 10. WRAP UP -->
+        <section class="py-32 px-6 text-center bg-asu-lightGray border-t border-gray-200">
             <div class="max-w-4xl mx-auto rise-block">
-                <h2 class="text-xs font-bold text-asu-maroon uppercase tracking-[0.4em] mb-4">09. Wrap Up</h2>
-                <h3 class="text-4xl md:text-6xl font-extrabold text-black tracking-tighter mb-12 uppercase leading-tight m-0">Inclusive Resources</h3>
+                <div class="mb-12 md:mb-16">
+                    <h2 class="text-sm font-bold text-asu-maroon uppercase tracking-[0.3em] mb-4">09. Wrap Up</h2>
+                    <h3 class="text-5xl md:text-6xl font-extrabold text-black tracking-tighter uppercase leading-[0.9] m-0">Inclusive Resources</h3>
+                </div>
+                
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mt-12">
-                    <a href="https://accessibility.asu.edu/" target="_blank" class="bg-asu-lightGray p-10 rounded-[2.5rem] border border-gray-100 hover:border-asu-maroon/30 transition-all group shadow-sm hover:shadow-lg no-underline">
-                        <div class="flex justify-between items-center mb-6"><h4 class="font-bold text-asu-maroon text-2xl uppercase tracking-tighter m-0">ASU Accessibility</h4><i class="fa-solid fa-arrow-up-right-from-square text-gray-400 group-hover:text-asu-maroon transition-colors"></i></div>
+                    <a href="https://accessibility.asu.edu/" target="_blank" class="bg-white p-10 rounded-[2.5rem] border border-gray-100 hover:border-asu-maroon/30 transition-all group shadow-sm hover:shadow-lg no-underline">
+                        <div class="flex justify-between items-center mb-6"><h4 class="font-bold text-asu-maroon text-2xl uppercase tracking-tighter m-0">ASU Accessibility</h4><i class="fa-solid fa-arrow-up-right-from-square text-gray-300 group-hover:text-asu-maroon transition-colors"></i></div>
                         <p class="text-sm text-asu-gray font-bold m-0">The central hub for digital accessibility standards at ASU.</p>
                     </a>
-                    <a href="https://teachonline.asu.edu/accessibility/" target="_blank" class="bg-asu-lightGray p-10 rounded-[2.5rem] border border-gray-100 hover:border-asu-maroon/30 transition-all group shadow-sm hover:shadow-lg no-underline">
-                        <div class="flex justify-between items-center mb-6"><h4 class="font-bold text-asu-maroon text-2xl uppercase tracking-tighter m-0">ASU TeachOnline</h4><i class="fa-solid fa-arrow-up-right-from-square text-gray-400 group-hover:text-asu-maroon transition-colors"></i></div>
+                    <a href="https://teachonline.asu.edu/accessibility/" target="_blank" class="bg-white p-10 rounded-[2.5rem] border border-gray-100 hover:border-asu-maroon/30 transition-all group shadow-sm hover:shadow-lg no-underline">
+                        <div class="flex justify-between items-center mb-6"><h4 class="font-bold text-asu-maroon text-2xl uppercase tracking-tighter m-0">ASU TeachOnline</h4><i class="fa-solid fa-arrow-up-right-from-square text-gray-300 group-hover:text-asu-maroon transition-colors"></i></div>
                         <p class="text-sm text-asu-gray font-bold m-0">Guides for creating inclusive STEM course materials.</p>
                     </a>
-                    <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" class="bg-asu-lightGray p-10 rounded-[2.5rem] border border-gray-100 hover:border-asu-maroon/30 transition-all group shadow-sm hover:shadow-lg no-underline">
-                        <div class="flex justify-between items-center mb-6"><h4 class="font-bold text-asu-maroon text-2xl uppercase tracking-tighter m-0">W3C WCAG</h4><i class="fa-solid fa-arrow-up-right-from-square text-gray-400 group-hover:text-asu-maroon transition-colors"></i></div>
+                    <a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" class="bg-white p-10 rounded-[2.5rem] border border-gray-100 hover:border-asu-maroon/30 transition-all group shadow-sm hover:shadow-lg no-underline">
+                        <div class="flex justify-between items-center mb-6"><h4 class="font-bold text-asu-maroon text-2xl uppercase tracking-tighter m-0">W3C WCAG</h4><i class="fa-solid fa-arrow-up-right-from-square text-gray-300 group-hover:text-asu-maroon transition-colors"></i></div>
                         <p class="text-sm text-asu-gray font-bold m-0">The international Web Content Accessibility Guidelines (WCAG) foundation.</p>
                     </a>
-                    <a href="http://diagramcenter.org/" target="_blank" class="bg-asu-lightGray p-10 rounded-[2.5rem] border border-gray-100 hover:border-asu-maroon/30 transition-all group shadow-sm hover:shadow-lg no-underline">
-                        <div class="flex justify-between items-center mb-6"><h4 class="font-bold text-asu-maroon text-2xl uppercase tracking-tighter m-0">DIAGRAM Center</h4><i class="fa-solid fa-arrow-up-right-from-square text-gray-400 group-hover:text-asu-maroon transition-colors"></i></div>
+                    <a href="http://diagramcenter.org/" target="_blank" class="bg-white p-10 rounded-[2.5rem] border border-gray-100 hover:border-asu-maroon/30 transition-all group shadow-sm hover:shadow-lg no-underline">
+                        <div class="flex justify-between items-center mb-6"><h4 class="font-bold text-asu-maroon text-2xl uppercase tracking-tighter m-0">DIAGRAM Center</h4><i class="fa-solid fa-arrow-up-right-from-square text-gray-300 group-hover:text-asu-maroon transition-colors"></i></div>
                         <p class="text-sm text-asu-gray font-bold m-0">Expert guidelines and tools specifically for making complex STEM images accessible.</p>
                     </a>
                 </div>
@@ -607,75 +612,10 @@
                 </button>
             </div>
         </section>
-        
-        <!-- SCRIPTS -->
-        <script>
-            (function() {
-                window.addEventListener('scroll', () => {
-                    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                    const scrolled = (winScroll / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
-                    const pBar = document.getElementById('progress-bar');
-                    if(pBar) pBar.style.width = scrolled + '%';
-                    const header = document.getElementById('top-nav');
-                    if (winScroll > 200) header.classList.remove('-translate-y-full');
-                    else header.classList.add('-translate-y-full');
-                });
 
-                const blockObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); blockObserver.unobserve(e.target); }});
-                }, { threshold: 0.15 });
-                document.querySelectorAll('.rise-block').forEach(b => blockObserver.observe(b));
-
-                window.toggleAccordion = function(id, btn) {
-                    const content = document.getElementById(id);
-                    const icon = btn.querySelector('.fa-chevron-down');
-                    if (content.style.maxHeight) { 
-                        content.style.maxHeight = null; 
-                        content.classList.remove('open');
-                        icon.style.transform = 'rotate(0deg)'; 
-                    } else { 
-                        content.style.maxHeight = content.scrollHeight + "px"; 
-                        content.classList.add('open');
-                        icon.style.transform = 'rotate(180deg)'; 
-                    }
-                };
-
-                window.revealHowTo = function() { 
-                    document.getElementById('reveal-btn').style.display = 'none'; 
-                    document.getElementById('practice-reveal').classList.remove('hidden'); 
-                };
-
-                let currentAudio = null;
-                window.playTTS = async function(text, btn) {
-                    if (currentAudio) { currentAudio.pause(); currentAudio = null; btn.innerHTML = `<i class="fa-solid fa-volume-up"></i> Listen`; return; }
-                    const originalHTML = btn.innerHTML; btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Loading...`;
-                    try {
-                        const apiKey = "";
-                        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`, {
-                            method: 'POST', headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ contents: [{ parts: [{ text: text }] }], generationConfig: { responseModalities: ["AUDIO"], speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: "Aoede" } } } } })
-                        });
-                        const data = await response.json();
-                        const base64Audio = data.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;
-                        if (base64Audio) {
-                            const binaryString = window.atob(base64Audio);
-                            const bytes = new Uint8Array(binaryString.length);
-                            for (let i = 0; i < binaryString.length; i++) bytes[i] = binaryString.charCodeAt(i);
-                            const wavHeader = new ArrayBuffer(44), view = new DataView(wavHeader);
-                            view.setUint32(0, 0x52494646, false); view.setUint32(4, 36 + bytes.buffer.byteLength, true);
-                            view.setUint32(8, 0x57415645, false); view.setUint32(12, 0x666d7420, false);
-                            view.setUint32(16, 16, true); view.setUint16(20, 1, true);
-                            view.setUint16(22, 1, true); view.setUint32(24, 24000, true);
-                            view.setUint32(28, 48000, true); view.setUint16(32, 2, true); view.setUint16(34, 16, true);
-                            view.setUint32(36, 0x64617461, false); view.setUint32(40, bytes.buffer.byteLength, true);
-                            const wavFile = new Uint8Array(44 + bytes.buffer.byteLength); wavFile.set(new Uint8Array(wavHeader), 0); wavFile.set(new Uint8Array(bytes.buffer), 44);
-                            currentAudio = new Audio(URL.createObjectURL(new Blob([wavFile], { type: 'audio/wav' })));
-                            currentAudio.play(); btn.innerHTML = `<i class="fa-solid fa-circle-stop"></i> Stop`;
-                            currentAudio.onended = () => { currentAudio = null; btn.innerHTML = originalHTML; };
-                        }
-                    } catch (e) { btn.innerHTML = originalHTML; }
-                };
-            })();
-        </script>
+        <!-- MINIFIED SCRIPTS: Prevents WordPress wpautop from injecting <p> and <br> tags -->
+        <script>!function(){window.addEventListener("scroll",(()=>{const e=document.body.scrollTop||document.documentElement.scrollTop,t=e/(document.documentElement.scrollHeight-document.documentElement.clientHeight)*100,n=document.getElementById("progress-bar");n&&(n.style.width=t+"%");const o=document.getElementById("top-nav");e>200?o.classList.remove("-translate-y-full"):o.classList.add("-translate-y-full")}));const e=new IntersectionObserver((e=>{e.forEach((e=>{e.isIntersecting&&(e.target.classList.add("is-visible"),t.unobserve(e.target))}))}),{threshold:.15}),t=e;document.querySelectorAll(".rise-block").forEach((t=>e.observe(t))),window.toggleAccordion=function(e,t){const n=document.getElementById(e),o=t.querySelector(".fa-chevron-down");n.style.maxHeight?(n.style.maxHeight=null,n.classList.remove("open"),o.style.transform="rotate(0deg)"):(n.style.maxHeight=n.scrollHeight+"px",n.classList.add("open"),o.style.transform="rotate(180deg)")},window.revealHowTo=function(){document.getElementById("reveal-btn").style.display="none",document.getElementById("practice-reveal").classList.remove("hidden")};let n=null;window.playTTS=async function(e,t){if(n)return n.pause(),n=null,void(t.innerHTML='<i class="fa-solid fa-volume-up"></i> Listen');const o=t.innerHTML;t.innerHTML='<i class="fa-solid fa-spinner fa-spin"></i> Loading...';try{const a=await fetch("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({contents:[{parts:[{text:e}]}],generationConfig:{responseModalities:["AUDIO"],speechConfig:{voiceConfig:{prebuiltVoiceConfig:{voiceName:"Aoede"}}}}})}),r=await a.json(),i=r.candidates?.[0]?.content?.parts?.[0]?.inlineData?.data;if(i){const e=window.atob(i),a=new Uint8Array(e.length);for(let t=0;t<e.length;t++)a[t]=e.charCodeAt(t);const r=new ArrayBuffer(44),s=new DataView(r);s.setUint32(0,1380533830,!1),s.setUint32(4,36+a.buffer.byteLength,!0),s.setUint32(8,1463899717,!1),s.setUint32(12,1718449184,!1),s.setUint32(16,16,!0),s.setUint16(20,1,!0),s.setUint16(22,1,!0),s.setUint32(24,24e3,!0),s.setUint32(28,48e3,!0),s.setUint16(32,2,!0),s.setUint16(34,16,!0),s.setUint32(36,1684108385,!1),s.setUint32(40,a.buffer.byteLength,!0);const l=new Uint8Array(44+a.buffer.byteLength);l.set(new Uint8Array(r),0),l.set(new Uint8Array(a.buffer),44),n=new Audio(URL.createObjectURL(new Blob([l],{type:"audio/wav"}))),n.play(),t.innerHTML='<i class="fa-solid fa-circle-stop"></i> Stop',n.onended=()=>{n=null,t.innerHTML=o}}}catch(e){t.innerHTML=o}}}();</script>
+    </div>
+</div>
 </body>
 </html>
